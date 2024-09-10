@@ -3,7 +3,7 @@ body {
     background-image: url("img/fondo2.jpeg");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100% 100%; /* Ajusta la imagen al 100% del ancho y alto de la pantalla */
+    background-size:cover; /* Ajusta la imagen al 100% del ancho y alto de la pantalla */
     margin: 0; /* Asegura que no haya ningún margen predeterminado */
     font-family: "Times New Roman", Times, serif;
     font-size: 16px;
@@ -39,12 +39,17 @@ nav a{
 nav a:hover{
     color: white;
 }
-@media (max-width:700px){
-    header{
+/* Ajustes para dispositivos móviles */
+@media (max-width: 700px) {
+    div1 {
         flex-direction: column;
+        align-items: center;
+        padding: 5px; /* Ajusta el padding en dispositivos móviles */
     }
-    nav{
-        padding: 10px 0px;
+
+    nav a {
+        font-size: 18px; /* Ajusta el tamaño de fuente en dispositivos móviles */
+        padding-right: 10px;
     }
 }
 /*Este es para la animacion de h1*/
@@ -145,6 +150,15 @@ li{
     line-height: 150%;
     text-align: justify;
 }
+/* Ajustes para dispositivos móviles */
+@media (max-width: 700px) {
+    p, p1, li {
+        font-size: 1.2em; /* Ajusta el tamaño de fuente en dispositivos móviles */
+        padding-left: 5px;
+        padding-right: 15px;
+    }
+}
+/* Configuración para la animación del slider */
     @-webkit-keyframes scroll {
         0% {
         -webkit-transform: translateX(0);
@@ -202,6 +216,20 @@ li{
         height: 50px;
         width: 250px;
     }
+/* Ajustes para dispositivos móviles */
+@media (max-width: 700px) {
+    .slider1 {
+        height: 200px; /* Ajusta la altura del slider en dispositivos móviles */
+    }
+
+    .slider1 .slide {
+        width: 150px; /* Ajusta el tamaño de las imágenes en el slider para móviles */
+    }
+
+    .slider1 .slide-track {
+        width: calc(150px * 14);
+    }
+}
 .box{
     width: 100%;
     height: 60vh;
